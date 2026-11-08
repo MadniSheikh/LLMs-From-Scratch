@@ -36,7 +36,6 @@ class TransformerBlock(nn.Module):
         shortcut = x
         x = self.norm1(x)
         x = self.attn(x)
-        print(x.shape)
         x = self.drop_shortcut(x)
         x = x+shortcut
         
